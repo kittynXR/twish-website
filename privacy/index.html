@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Privacy Policy — Twish!</title>
+  <meta name="description" content="How Twish handles player data, retention, identity sharing, and privacy requests.">
+  <meta name="theme-color" content="#17213a">
+  <link rel="canonical" href="https://twish.fish/privacy/">
+  <link rel="icon" type="image/png" href="/assets/icons/player_24.png">
+  <script src="/theme.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/legal.css">
+  <script src="/guide.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#policy">Skip to the policy</a>
+  <header class="site-header">
+    <a class="wordmark" href="/" aria-label="Twish home"><img src="/assets/icons/player_24.png" width="32" height="32" alt="">Twish<span>!</span></a>
+    <a class="header-link" href="/">Fishing guide <span aria-hidden="true">↗</span></a>
+    <button class="theme-toggle" type="button" aria-label="Switch to light mode" hidden>Light mode</button>
+  </header>
+  <main id="policy" class="legal-content">
+    <h1>Twish! Privacy Policy</h1>
+<p class="meta">Effective date: July 6, 2026 &middot; Last updated: July 22, 2026</p>
+<p>This Privacy Policy explains how the developer of Twish! (&ldquo;Twish!&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;) collects, uses, and protects information when you use the Twish! Twitch Extension, the Twish! hosted chat bot, or the Twish! game servers (together, the &ldquo;Service&rdquo;).</p>
+<p>Twish! is a fishing minigame that runs inside Twitch. It is not affiliated with or endorsed by Twitch Interactive, Inc. Your use of Twitch itself is governed by Twitch&rsquo;s own Terms of Service and Privacy Notice.</p>
+
+<h2>1. What we collect</h2>
+<p>We collect the minimum data needed to run the game:</p>
+<div class="legal-table" role="region" aria-label="Data collected by Twish" tabindex="0"><table>
+<tr><th>Data</th><th>Source</th><th>Notes</th></tr>
+<tr><td>Twitch user ID</td><td>Twitch Extension helper / Twitch chat</td><td>Your numeric Twitch ID, used as your persistent player identity. Extension gameplay begins only after you grant Twitch identity sharing; recognized chat commands already include your Twitch user ID through Twitch Chat. Before identity sharing, Twitch supplies a signed opaque identifier to the extension, but Twish does not create a new player profile or gameplay records from it. Legacy prerelease opaque profiles are retained only so their progress can merge into the same viewer&rsquo;s identified profile after consent.</td></tr>
+<tr><td>Twitch display name</td><td>Twitch Extension helper / Twitch chat</td><td>Shown on leaderboards, catch announcements, and tournament results.</td></tr>
+<tr><td>Twitch chat events and recognized command metadata</td><td>Twitch EventSub / hosted IRC fallback</td><td>When a broadcaster connects Twish Chat and enables command replies, Twish receives channel chat through EventSub; the temporary hybrid fallback receives chat in legacy opted-in channels through Twitch IRC. Twish immediately ignores and does not store non-command messages. For a recognized EventSub command, Twish temporarily stores only delivery and message IDs, channel and chatter IDs, chatter display name, command name, processing timestamps/status, and the generated bot reply text/type needed for crash-safe delivery. For <code>!fish</code> on either transport, it also temporarily stores an at-most-once processing marker and cached gameplay outcome. It does not retain the full incoming message or a chat log. This metadata becomes eligible for deletion at 24 hours and is removed by the next scheduled pruning pass (normally within about one additional hour); resulting gameplay records are retained separately as described below.</td></tr>
+<tr><td>Gameplay records</td><td>The Service</td><td>Casts, catches, fish collection, inventory, XP/level/coins, equipment, quests, achievements, tournament scores, and game settings.</td></tr>
+<tr><td>Bits transaction records</td><td>Twitch Extension Bits API</td><td>The Twitch transaction ID, product SKU, Bits amount, and the channel where the product was used. Required to deliver the item you unlocked and to prevent duplicate processing.</td></tr>
+<tr><td>Technical logs</td><td>The Service</td><td>IP addresses and request metadata appear in short-lived server logs used for rate limiting, abuse prevention, and debugging.</td></tr>
+</table></div>
+<p><strong>What we do NOT collect:</strong> email addresses, real names, postal addresses, phone numbers, passwords, or any payment details. All payments (Bits purchases) are handled entirely by Twitch; we never see your payment information.</p>
+
+<h2>2. How we use it</h2>
+<ul>
+<li><strong>Run the game</strong> &mdash; resolve casts, record catches, persist your collection and progression across channels and sessions.</li>
+<li><strong>Display gameplay</strong> &mdash; show your display name on leaderboards, catch cards, tournament standings, and chat bot replies.</li>
+<li><strong>Fulfil Bits products</strong> &mdash; credit items unlocked with Bits and use the Twitch transaction ID to guarantee each transaction is honored exactly once.</li>
+<li><strong>Keep the Service healthy</strong> &mdash; rate limiting, anti-abuse, and debugging.</li>
+<li><strong>Comply with law</strong> &mdash; retain records where legally required.</li>
+</ul>
+<p>Where the GDPR applies, our legal bases are performance of a contract (running the game you chose to play) and legitimate interests (service integrity, abuse prevention).</p>
+
+<h2>3. What we never do</h2>
+<ul>
+<li>We do <strong>not</strong> sell Twitch user data.</li>
+<li>We do <strong>not</strong> share Twitch user data with third parties for their own purposes, including advertising or marketing.</li>
+<li>We do <strong>not</strong> use your data for advertising, profiling, or tracking outside the Service.</li>
+<li>We do <strong>not</strong> transfer your data to anyone except the infrastructure providers that host the Service (acting as processors on our instructions) or where disclosure is required by law.</li>
+</ul>
+
+<h2>4. Where your data is stored</h2>
+<p>Game data is stored on servers operated for us by our hosting provider (Hetzner) in the United States (Oregon). If you access the Service from another region &mdash; including the EEA or UK &mdash; your data is transferred to and processed in the United States.</p>
+
+<h2>5. How long we keep it</h2>
+<ul>
+<li><strong>Gameplay records and player profile</strong> &mdash; kept while your player account is active, so your collection and progression persist. Deleted on request (see Section 6).</li>
+<li><strong>Bits transaction records</strong> &mdash; kept for as long as needed for accounting, dispute resolution, and legal compliance, then deleted.</li>
+<li><strong>Technical logs (including IP addresses)</strong> &mdash; automatically rotated; kept no longer than 30 days.</li>
+<li><strong>Recognized chat-command metadata, temporary <code>!fish</code> outcome, and generated reply</strong> &mdash; becomes eligible for deletion at 24 hours and is removed by the next scheduled pruning pass (normally within about one additional hour). It is used solely to prevent duplicate execution and support reliable processing and reply delivery. Non-command messages are never stored.</li>
+</ul>
+
+<h2>6. Deletion and your choices</h2>
+<p>To have your player data deleted, email <a href="mailto:privacy@twish.fish">privacy@twish.fish</a> from a means that lets us verify you control the Twitch account (for example, include your Twitch username and respond to a verification whisper or a code we ask you to place in your Twitch bio). We will delete your player profile, gameplay records, and collection within 30 days of verification. Bits transaction records may be retained where required for financial or legal compliance, dissociated from your deleted profile where possible.</p>
+<p>You can also limit collection up front:</p>
+<ul>
+<li><strong>Identity sharing</strong> &mdash; extension gameplay requires a one-time Twitch identity-sharing grant so progress and public leaderboard names belong to the correct account. If you decline, Twish receives only Twitch&rsquo;s signed opaque identifier for that session and does not create a new player profile or gameplay records. You may still use enabled chat commands, where Twitch Chat supplies your normal chatter identity.</li>
+<li><strong>Chat fishing</strong> &mdash; chat access is off until a broadcaster explicitly selects <strong>Connect with Twitch</strong> and grants <code>channel:bot</code>. A broadcaster can disable command replies at any time, which stops local processing immediately and requests deletion of the active EventSub subscription while preserving the connection for later re-enabling. Selecting <strong>Disconnect from Twitch</strong> also forgets Twish&rsquo;s stored grant state. Broadcasters may additionally revoke the bot application from their Twitch Connections settings.</li>
+<li><strong>Uninstall</strong> &mdash; broadcasters can disconnect Twish Chat and then uninstall the extension at any time; viewers can simply stop interacting with it.</li>
+</ul>
+
+<h2>7. Your rights (GDPR / CCPA summary)</h2>
+<p>If you are in the EEA, UK, or a similar jurisdiction, you have the right to access, rectify, erase, restrict, or port your personal data, to object to processing based on legitimate interests, and to lodge a complaint with your supervisory authority.</p>
+<p>If you are a California resident, you have the right to know what personal information we collect (Section 1), to request deletion (Section 6), and to non-discrimination for exercising those rights. We do not sell or share personal information as defined by the CCPA/CPRA.</p>
+<p>To exercise any of these rights, email <a href="mailto:privacy@twish.fish">privacy@twish.fish</a>.</p>
+
+<h2>8. Children</h2>
+<p>The Service is available only through Twitch, which requires users to be at least 13 years old (or older where local law requires). Twish! is not directed at children under 13, and we do not knowingly collect personal data from them. If you believe a child under 13 has used the Service, contact us and we will delete the associated data.</p>
+
+<h2>9. Security</h2>
+<p>Data is transmitted over TLS and stored in access-controlled databases. Requests to the game API are authenticated with Twitch-signed tokens. No system is perfectly secure, but we design for least data: the less we collect, the less can go wrong.</p>
+
+<h2>10. Changes to this policy</h2>
+<p>We may update this policy as the Service evolves. Material changes will be reflected here with a new effective date; this page is always the current version.</p>
+
+<h2>11. Contact</h2>
+<p><strong>Operator:</strong> the developer of Twish!<br>
+<strong>Email:</strong> <a href="mailto:privacy@twish.fish">privacy@twish.fish</a></p>
+<p>See also the <a href="/terms/">Twish! Terms of Service</a>.</p>
+
+  </main>
+  <footer class="legal-footer"><nav aria-label="Site links"><a href="/">Fishing guide</a><a href="/privacy/">Privacy policy</a><a href="/terms/">Terms of service</a><a href="mailto:support@twish.fish">Contact</a></nav></footer>
+</body>
+</html>
