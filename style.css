@@ -412,6 +412,18 @@ h1 span {
   justify-content: center;
   gap: 20px;
 }
+.mystery-fish {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  color: #f3fff4;
+  background: #315365;
+  box-shadow: inset 0 0 0 3px #9ecccc;
+  font: 700 30px/1 ui-monospace, monospace;
+  clip-path: polygon(12% 0, 88% 0, 88% 12%, 100% 12%, 100% 88%, 88% 88%, 88% 100%, 12% 100%, 12% 88%, 0 88%, 0 12%, 12% 12%);
+}
 .meter-track {
   position: relative;
   display: block;
@@ -436,6 +448,10 @@ h1 span {
   position: absolute;
   left: -18px;
   top: 56px;
+}
+.meter-fish.mystery-fish {
+  left: -5px;
+  top: 69px;
 }
 .meter-direction {
   display: flex;
