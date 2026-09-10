@@ -11,20 +11,27 @@ if (themeToggle) {
   themeToggle.addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
     document.documentElement.dataset.theme = next;
-    try { localStorage.setItem('twish-guide-theme', next); } catch { /* Optional preference only. */ }
+    try {
+      localStorage.setItem('twish-guide-theme', next);
+    } catch {
+      /* Optional preference only. */
+    }
     updateThemeLabel();
   });
 }
 const chapters = [...document.querySelectorAll('.chapter')];
 const links = [...document.querySelectorAll('.contents a')];
 if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    const current = entries.find((entry) => entry.isIntersecting);
-    if (!current) return;
-    for (const link of links) {
-      if (link.hash === `#${current.target.id}`) link.setAttribute('aria-current', 'location');
-      else link.removeAttribute('aria-current');
-    }
-  }, { rootMargin: '-10% 0px -70% 0px' });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const current = entries.find((entry) => entry.isIntersecting);
+      if (!current) return;
+      for (const link of links) {
+        if (link.hash === `#${current.target.id}`) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      }
+    },
+    { rootMargin: '-10% 0px -70% 0px' },
+  );
   chapters.forEach((chapter) => observer.observe(chapter));
 }

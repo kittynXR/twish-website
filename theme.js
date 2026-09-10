@@ -2,4 +2,6 @@
 try {
   const saved = localStorage.getItem('twish-guide-theme');
   if (saved === 'light') document.documentElement.dataset.theme = 'light';
-} catch { /* The default still works if browser storage is unavailable. */ }
+} catch {
+  /* The default still works if browser storage is unavailable. */
+}
